@@ -160,7 +160,11 @@ export default function RepoBrowser() {
       <div className="explorer-toolbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', borderBottom: '1px solid var(--line)', background: '#FAF8FC', flexWrap: 'wrap', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 800, color: '#111116', display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ color: '#8A67F6' }}>📦</span> xanstomper/mochi
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A67F6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+            xanstomper/mochi
           </span>
           <span style={{ fontSize: 11.5, background: '#EDE8F8', color: '#8A67F6', padding: '3px 8px', borderRadius: 999, fontWeight: 700 }}>
             {ALL_REPO_PATHS.length} Files in Repository

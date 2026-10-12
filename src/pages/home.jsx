@@ -274,328 +274,96 @@ function StatsTicker() {
   );
 }
 
-function MochiShowcaseSection() {
+function TerminalDemos() {
   const base = typeof window !== 'undefined' && window.location.pathname.startsWith('/mochi') ? '/mochi' : '';
-  const [viewMode, setViewMode] = useState('both'); // 'both' | 'hello' | 'snake'
-
   return (
-    <section className="section" id="showcase" style={{ maxWidth: 1200, margin: '0 auto', padding: '50px 4vw 20px', scrollMarginTop: 90 }}>
-      <AnimatedContent direction="bottom" delay={0.05} blur={12}>
-        <div className="section-tag-pill" style={{ justifyContent: 'center', margin: '0 auto 14px', display: 'flex' }}>
-          <span className="tag-sparkle">✦</span>
-          <span className="tag-part-dark">AUTHENTIC EXECUTION /</span>
-          <span className="tag-part-purple">LIVE TERMINAL RECORDINGS</span>
-        </div>
-      </AnimatedContent>
-
-      <EditorialReveal delay={0.1}>
-        <div style={{ textAlign: 'center', marginBottom: 12 }}>
-          <h2 className="section-title-huge" style={{ fontSize: 'clamp(26px, 3.5vw, 42px)', margin: 0, letterSpacing: '-0.03em' }}>
-            SEE MOCHI IN <span className="accent-title">ACTION</span>
-          </h2>
-        </div>
-      </EditorialReveal>
-
-      <AnimatedContent direction="bottom" delay={0.15} distance={20} blur={10}>
-        <p style={{ textAlign: 'center', fontSize: 15.5, color: 'var(--ink-soft)', maxWidth: 640, margin: '0 auto 24px', lineHeight: 1.55 }}>
-          Real terminal sessions recorded directly from production runs. Compact, sub-second cold starts
-          and autonomous end-to-end multi-file loops.
-        </p>
-      </AnimatedContent>
-
-      {/* Mode Filter Selector */}
-      <AnimatedContent direction="bottom" delay={0.18} distance={20} blur={10}>
+    <div style={{ maxWidth: 1140, margin: '10px auto 60px', padding: '0 4vw' }}>
+      <AnimatedContent direction="bottom" delay={0.12} distance={25} blur={12}>
         <div
           style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 10,
-            marginBottom: 24,
-            flexWrap: 'wrap',
-          }}
-        >
-          <button
-            onClick={() => setViewMode('both')}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-              padding: '9px 18px',
-              borderRadius: 12,
-              background: viewMode === 'both' ? 'linear-gradient(135deg, rgba(138, 103, 246, 0.28), rgba(167, 139, 250, 0.14))' : '#110F1D',
-              border: viewMode === 'both' ? '1.5px solid #8A67F6' : '1px solid rgba(255, 255, 255, 0.08)',
-              color: viewMode === 'both' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.65)',
-              cursor: 'pointer',
-              fontWeight: 600,
-              fontSize: 13,
-              fontFamily: 'inherit',
-              boxShadow: viewMode === 'both' ? '0 6px 20px rgba(138, 103, 246, 0.25)' : 'none',
-              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-            }}
-          >
-            <span style={{ fontSize: 14 }}>⚡</span>
-            <span>Side-by-Side (Both)</span>
-            <span style={{ fontSize: 10, padding: '2px 6px', borderRadius: 5, background: viewMode === 'both' ? '#8A67F6' : 'rgba(255, 255, 255, 0.1)', color: '#FFF', fontWeight: 700 }}>
-              Dual View
-            </span>
-          </button>
-
-          <button
-            onClick={() => setViewMode('hello')}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-              padding: '9px 18px',
-              borderRadius: 12,
-              background: viewMode === 'hello' ? 'linear-gradient(135deg, rgba(138, 103, 246, 0.28), rgba(167, 139, 250, 0.14))' : '#110F1D',
-              border: viewMode === 'hello' ? '1.5px solid #8A67F6' : '1px solid rgba(255, 255, 255, 0.08)',
-              color: viewMode === 'hello' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.65)',
-              cursor: 'pointer',
-              fontWeight: 600,
-              fontSize: 13,
-              fontFamily: 'inherit',
-              boxShadow: viewMode === 'hello' ? '0 6px 20px rgba(138, 103, 246, 0.25)' : 'none',
-              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-            }}
-          >
-            <span style={{ fontSize: 14 }}>💬</span>
-            <span>Hello Quickstart</span>
-            <span style={{ fontSize: 10, padding: '2px 6px', borderRadius: 5, background: viewMode === 'hello' ? '#8A67F6' : 'rgba(255, 255, 255, 0.1)', color: '#FFF', fontWeight: 700 }}>
-              0.02s
-            </span>
-          </button>
-
-          <button
-            onClick={() => setViewMode('snake')}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8,
-              padding: '9px 18px',
-              borderRadius: 12,
-              background: viewMode === 'snake' ? 'linear-gradient(135deg, rgba(138, 103, 246, 0.28), rgba(167, 139, 250, 0.14))' : '#110F1D',
-              border: viewMode === 'snake' ? '1.5px solid #8A67F6' : '1px solid rgba(255, 255, 255, 0.08)',
-              color: viewMode === 'snake' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.65)',
-              cursor: 'pointer',
-              fontWeight: 600,
-              fontSize: 13,
-              fontFamily: 'inherit',
-              boxShadow: viewMode === 'snake' ? '0 6px 20px rgba(138, 103, 246, 0.25)' : 'none',
-              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-            }}
-          >
-            <span style={{ fontSize: 14 }}>🐍</span>
-            <span>Snake Game Build</span>
-            <span style={{ fontSize: 10, padding: '2px 6px', borderRadius: 5, background: viewMode === 'snake' ? '#8A67F6' : 'rgba(255, 255, 255, 0.1)', color: '#FFF', fontWeight: 700 }}>
-              Autonomous
-            </span>
-          </button>
-        </div>
-      </AnimatedContent>
-
-      {/* Dual Compact Terminal Grid */}
-      <AnimatedContent direction="bottom" delay={0.22} distance={25} blur={12}>
-        <div
-          style={{
-            maxWidth: viewMode === 'both' ? 1060 : 620,
-            margin: '0 auto',
             display: 'grid',
-            gridTemplateColumns: viewMode === 'both' ? 'repeat(auto-fit, minmax(min(100%, 460px), 1fr))' : '1fr',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
             gap: 22,
-            transition: 'all 0.3s ease',
           }}
         >
-          {/* Card 1: Hello Demo & Fast TUI */}
-          {(viewMode === 'both' || viewMode === 'hello') && (
+          {/* Terminal 1: Hello Demo */}
+          <div
+            style={{
+              background: '#0B0914',
+              borderRadius: 14,
+              border: '1px solid rgba(138, 103, 246, 0.25)',
+              boxShadow: '0 16px 40px rgba(0, 0, 0, 0.45)',
+              overflow: 'hidden',
+            }}
+          >
             <div
               style={{
-                background: '#0B0914',
-                borderRadius: 16,
-                border: '1.5px solid rgba(138, 103, 246, 0.35)',
-                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06)',
-                overflow: 'hidden',
+                background: '#131122',
+                padding: '9px 14px',
                 display: 'flex',
-                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 8,
+                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: 11.5,
+                color: 'rgba(255, 255, 255, 0.75)',
               }}
             >
-              {/* Terminal Titlebar */}
-              <div
-                style={{
-                  background: '#131122',
-                  padding: '10px 14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 11.5,
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
-                  <span style={{ marginLeft: 6, color: 'rgba(255, 255, 255, 0.75)', fontWeight: 600 }}>
-                    ~/mochi — hello quickstart
-                  </span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ background: 'rgba(138, 103, 246, 0.22)', color: '#C4B5FD', padding: '2px 7px', borderRadius: 5, fontSize: 10.5, fontWeight: 700 }}>
-                    0.02s COLD START
-                  </span>
-                </div>
-              </div>
-
-              {/* Viewport: Constrained Height */}
-              <div
-                style={{
-                  position: 'relative',
-                  background: '#06050b',
-                  maxHeight: 310,
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <img
-                  src={base + '/assets/demo/tui_demo.gif'}
-                  alt="Mochi Fast TUI & Interactive Chat Demo"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: 310,
-                    objectFit: 'contain',
-                    display: 'block',
-                  }}
-                  loading="eager"
-                />
-              </div>
-
-              {/* Compact Caption Footer */}
-              <div
-                style={{
-                  background: '#0E0C18',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.07)',
-                  padding: '12px 16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 12,
-                }}
-              >
-                <div>
-                  <div style={{ color: '#A78BFA', fontWeight: 700, fontSize: 11.5, fontFamily: 'var(--font-mono)' }}>
-                    ⚡ 01 / FAST TUI &amp; CHAT
-                  </div>
-                  <div style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 11.5, marginTop: 2 }}>
-                    Instant launch, model selection &amp; inline streaming response.
-                  </div>
-                </div>
-                <span style={{ color: '#34D399', fontSize: 11, fontWeight: 700, whiteSpace: 'nowrap', fontFamily: 'var(--font-mono)' }}>
-                  ✓ Instant
-                </span>
-              </div>
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
+              <span style={{ marginLeft: 6 }}>mochi</span>
             </div>
-          )}
+            <div style={{ background: '#06050b' }}>
+              <img
+                src={base + '/assets/demo/tui_demo.gif'}
+                alt="Mochi terminal session"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+                loading="eager"
+              />
+            </div>
+          </div>
 
-          {/* Card 2: Autonomous Snake Game Build */}
-          {(viewMode === 'both' || viewMode === 'snake') && (
+          {/* Terminal 2: Snake Demo */}
+          <div
+            style={{
+              background: '#0B0914',
+              borderRadius: 14,
+              border: '1px solid rgba(138, 103, 246, 0.25)',
+              boxShadow: '0 16px 40px rgba(0, 0, 0, 0.45)',
+              overflow: 'hidden',
+            }}
+          >
             <div
               style={{
-                background: '#0B0914',
-                borderRadius: 16,
-                border: '1.5px solid rgba(138, 103, 246, 0.35)',
-                boxShadow: '0 20px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06)',
-                overflow: 'hidden',
+                background: '#131122',
+                padding: '9px 14px',
                 display: 'flex',
-                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 8,
+                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                fontFamily: 'var(--font-mono)',
+                fontSize: 11.5,
+                color: 'rgba(255, 255, 255, 0.75)',
               }}
             >
-              {/* Terminal Titlebar */}
-              <div
-                style={{
-                  background: '#131122',
-                  padding: '10px 14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 11.5,
-                }}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
-                  <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
-                  <span style={{ marginLeft: 6, color: 'rgba(255, 255, 255, 0.75)', fontWeight: 600 }}>
-                    ~/games — mochi "code snake game"
-                  </span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ background: 'rgba(56, 189, 248, 0.22)', color: '#7DD3FC', padding: '2px 7px', borderRadius: 5, fontSize: 10.5, fontWeight: 700 }}>
-                    AUTONOMOUS BUILD
-                  </span>
-                </div>
-              </div>
-
-              {/* Viewport: Constrained Height */}
-              <div
-                style={{
-                  position: 'relative',
-                  background: '#06050b',
-                  maxHeight: 310,
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <img
-                  src={base + '/assets/demo/tui_snake.gif'}
-                  alt="Mochi Autonomous Snake Game Agent Build Demo"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxHeight: 310,
-                    objectFit: 'contain',
-                    display: 'block',
-                  }}
-                  loading="eager"
-                />
-              </div>
-
-              {/* Compact Caption Footer */}
-              <div
-                style={{
-                  background: '#0E0C18',
-                  borderTop: '1px solid rgba(255, 255, 255, 0.07)',
-                  padding: '12px 16px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 12,
-                }}
-              >
-                <div>
-                  <div style={{ color: '#38BDF8', fontWeight: 700, fontSize: 11.5, fontFamily: 'var(--font-mono)' }}>
-                    🐍 02 / CODE SNAKE GAME
-                  </div>
-                  <div style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: 11.5, marginTop: 2 }}>
-                    Multi-file generation, test suite verification &amp; self-correction.
-                  </div>
-                </div>
-                <span style={{ color: '#38BDF8', fontSize: 11, fontWeight: 700, whiteSpace: 'nowrap', fontFamily: 'var(--font-mono)' }}>
-                  ✓ Verified
-                </span>
-              </div>
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
+              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
+              <span style={{ marginLeft: 6 }}>mochi "code snake game"</span>
             </div>
-          )}
+            <div style={{ background: '#06050b' }}>
+              <img
+                src={base + '/assets/demo/tui_snake.gif'}
+                alt="Mochi autonomous build"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+                loading="eager"
+              />
+            </div>
+          </div>
         </div>
       </AnimatedContent>
-    </section>
+    </div>
   );
 }
 
@@ -941,7 +709,7 @@ function SpecialistRolesSection() {
                         fontWeight: 600,
                       }}
                     >
-                      ⚡ {tool}
+                      {tool}
                     </span>
                   ))}
                 </div>
@@ -1122,7 +890,7 @@ function ArchitectureSection() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               <div style={{ background: '#FAF8FC', borderRadius: 16, padding: 22, border: '1px solid var(--line)' }}>
                 <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--purple-dark)', marginBottom: 8 }}>
-                  🛡️ Read-Only System Mounts
+                  Read-Only System Mounts
                 </div>
                 <p style={{ fontSize: 13.5, color: 'var(--ink-soft)', margin: 0, lineHeight: 1.6 }}>
                   <code>/usr</code>, <code>/bin</code>, and <code>/lib</code> mounted read-only via unprivileged <code>bwrap</code>. System binaries cannot be replaced or infected.
@@ -1131,7 +899,7 @@ function ArchitectureSection() {
 
               <div style={{ background: '#FAF8FC', borderRadius: 16, padding: 22, border: '1px solid var(--line)' }}>
                 <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--purple-dark)', marginBottom: 8 }}>
-                  🔒 Credential Blackhole
+                  Credential Blackhole
                 </div>
                 <p style={{ fontSize: 13.5, color: 'var(--ink-soft)', margin: 0, lineHeight: 1.6 }}>
                   <code>~/.ssh</code>, <code>~/.aws</code>, and <code>~/.gnupg</code> masked with isolated empty tmpfs filesystems. Prompt injections cannot exfiltrate user keys.
@@ -1140,7 +908,7 @@ function ArchitectureSection() {
 
               <div style={{ background: '#FAF8FC', borderRadius: 16, padding: 22, border: '1px solid var(--line)' }}>
                 <div style={{ fontSize: 15, fontWeight: 700, color: 'var(--purple-dark)', marginBottom: 8 }}>
-                  🌐 Strict Egress Control
+                  Strict Egress Control
                 </div>
                 <p style={{ fontSize: 13.5, color: 'var(--ink-soft)', margin: 0, lineHeight: 1.6 }}>
                   Configurable <code>--unshare-net</code> isolates untrusted code from making rogue HTTP calls or reverse TCP shells during testing.
@@ -1946,7 +1714,7 @@ export default function Home() {
     <>
       <EngineeringGridBackground />
       <HeroSection />
-      <MochiShowcaseSection />
+      <TerminalDemos />
       <StatsTicker />
       <CapabilitiesSection />
       <SpecialistRolesSection />
