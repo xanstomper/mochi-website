@@ -274,99 +274,6 @@ function StatsTicker() {
   );
 }
 
-function TerminalDemos() {
-  const base = typeof window !== 'undefined' && window.location.pathname.startsWith('/mochi') ? '/mochi' : '';
-  return (
-    <div style={{ maxWidth: 1140, margin: '10px auto 60px', padding: '0 4vw' }}>
-      <AnimatedContent direction="bottom" delay={0.12} distance={25} blur={12}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))',
-            gap: 22,
-          }}
-        >
-          {/* Terminal 1: Hello Demo */}
-          <div
-            style={{
-              background: '#0B0914',
-              borderRadius: 14,
-              border: '1px solid rgba(138, 103, 246, 0.25)',
-              boxShadow: '0 16px 40px rgba(0, 0, 0, 0.45)',
-              overflow: 'hidden',
-            }}
-          >
-            <div
-              style={{
-                background: '#131122',
-                padding: '9px 14px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                fontFamily: 'var(--font-mono)',
-                fontSize: 11.5,
-                color: 'rgba(255, 255, 255, 0.75)',
-              }}
-            >
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
-              <span style={{ marginLeft: 6 }}>mochi</span>
-            </div>
-            <div style={{ background: '#06050b' }}>
-              <img
-                src={base + '/assets/demo/tui_demo.gif'}
-                alt="Mochi terminal session"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-                loading="eager"
-              />
-            </div>
-          </div>
-
-          {/* Terminal 2: Snake Demo */}
-          <div
-            style={{
-              background: '#0B0914',
-              borderRadius: 14,
-              border: '1px solid rgba(138, 103, 246, 0.25)',
-              boxShadow: '0 16px 40px rgba(0, 0, 0, 0.45)',
-              overflow: 'hidden',
-            }}
-          >
-            <div
-              style={{
-                background: '#131122',
-                padding: '9px 14px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8,
-                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-                fontFamily: 'var(--font-mono)',
-                fontSize: 11.5,
-                color: 'rgba(255, 255, 255, 0.75)',
-              }}
-            >
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#EF4444', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#F59E0B', display: 'inline-block' }} />
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10B981', display: 'inline-block' }} />
-              <span style={{ marginLeft: 6 }}>mochi "code snake game"</span>
-            </div>
-            <div style={{ background: '#06050b' }}>
-              <img
-                src={base + '/assets/demo/tui_snake.gif'}
-                alt="Mochi autonomous build"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-                loading="eager"
-              />
-            </div>
-          </div>
-        </div>
-      </AnimatedContent>
-    </div>
-  );
-}
-
 function CapabilitiesSection() {
   return (
     <section className="section" id="capabilities" style={{ maxWidth: 1560, margin: '0 auto', padding: '80px 4vw', scrollMarginTop: 100 }}>
@@ -1715,7 +1622,6 @@ export default function Home() {
       <EngineeringGridBackground />
       <HeroSection />
       <StatsTicker />
-      <TerminalDemos />
       <CapabilitiesSection />
       <SpecialistRolesSection />
       <ArchitectureSection />

@@ -46,8 +46,8 @@ export default function Source() {
           <div className="pagehead-row">
             <div className="pagehead-col">
               <AnimatedContent direction="left" delay={0.06} distance={40} blur={12}>
-                <div className="hero-eyebrow">
-                  <span className="sparkle" />
+                <div className="hero-eyebrow-clean">
+                  <span className="sparkle-star">✦</span>
                   OPEN SOURCE & TRANSPARENT
                 </div>
               </AnimatedContent>

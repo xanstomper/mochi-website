@@ -4,6 +4,7 @@ import Mochi from '../Mascot.jsx';
 import Footer from '../Footer.jsx';
 import EngineeringGridBackground from '../EngineeringGridBackground.jsx';
 import { AnimatedContent } from '../anim.jsx';
+import { TerminalDemos } from './docs-demos.jsx';
 import {
   IconRocket, IconTerminal, IconUsers, IconWrench,
   IconBox, IconGlobe, IconSearch, IconShield, IconLayers,
@@ -207,6 +208,7 @@ const SIDEBAR = [
     ['env', 'Environment Variables Reference'],
     ['memory', 'Memory, Rules & Run Traces'],
     ['plugins', 'Plugin Hooks Architecture'],
+    ['demos', 'Terminal Demos'],
   ]],
 ];
 
@@ -227,9 +229,9 @@ export default function Docs() {
           <div className="pagehead-row">
             <div className="pagehead-col">
               <AnimatedContent direction="left" delay={0.05} distance={40} blur={14}>
-                <div className="hero-eyebrow">
-                  <span className="sparkle" />
-                  COMPLETE TECHNICAL DOCUMENTATION & REFERENCE (v0.23.0)
+                <div className="hero-eyebrow-clean">
+                  <span className="sparkle-star">✦</span>
+                  COMPLETE TECHNICAL DOCUMENTATION & REFERENCE (v0.24.0)
                 </div>
               </AnimatedContent>
 
@@ -1016,6 +1018,8 @@ export default function Docs() {
                   </div>
                 </AnimatedContent>
               </section>
+
+              <TerminalDemos />
             </main>
           </div>
         </div>

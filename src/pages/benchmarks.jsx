@@ -179,8 +179,8 @@ export default function Benchmarks() {
           <div className="pagehead-row">
             <div className="pagehead-col">
               <AnimatedContent direction="left" delay={0.05} distance={40} blur={14}>
-                <div className="hero-eyebrow">
-                  <span className="sparkle" />
+                <div className="hero-eyebrow-clean">
+                  <span className="sparkle-star">✦</span>
                   STANDARDIZED EMPIRICAL BENCHMARKS (OCTOBER 2026)
                 </div>
               </AnimatedContent>
