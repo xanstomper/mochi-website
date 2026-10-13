@@ -80,18 +80,6 @@ function TerminalDemos() {
             caption="Live session trace: autonomous multi-pass verification loop"
             eager
           />
-          <DemoWindow
-            title="mochi (fresh launch)"
-            src="/assets/demo/tui_launch.gif"
-            alt="Mochi cold launch and splash"
-            caption="Cold start to interactive prompt — no warm-up, no lag"
-          />
-          <DemoWindow
-            title="mochi (skills library)"
-            src="/assets/demo/tui_skills.gif"
-            alt="Mochi skills library browsing"
-            caption="Browsing the bundled skill library in the TUI"
-          />
         </div>
       </AnimatedContent>
     </section>
