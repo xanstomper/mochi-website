@@ -1,3 +1,4 @@
+import { AnimatedContent } from "../anim.jsx";
 function DemoWindow({ title, src, alt, caption, eager }) {
   const base = typeof window !== 'undefined' && window.location.pathname.startsWith('/mochi') ? '/mochi' : '';
   return (
