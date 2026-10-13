@@ -231,7 +231,7 @@ export default function Docs() {
               <AnimatedContent direction="left" delay={0.05} distance={40} blur={14}>
                 <div className="hero-eyebrow-clean">
                   <span className="sparkle-star">✦</span>
-                  COMPLETE TECHNICAL DOCUMENTATION & REFERENCE (v0.24.0)
+                  COMPLETE TECHNICAL DOCUMENTATION & REFERENCE (v0.25.0)
                 </div>
               </AnimatedContent>
 
@@ -257,7 +257,7 @@ export default function Docs() {
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                   />
-                  <span className="doc-search-badge">v0.23.0</span>
+                  <span className="doc-search-badge">v0.25.0</span>
                 </div>
               </AnimatedContent>
             </div>

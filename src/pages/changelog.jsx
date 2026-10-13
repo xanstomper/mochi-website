@@ -47,9 +47,9 @@ function formatItem(text) {
 export default function Changelog() {
   const [activeTag, setActiveTag] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeVersion, setActiveVersion] = useState(RELEASES[0]?.version || 'v0.22.1 (Current)');
+  const [activeVersion, setActiveVersion] = useState(RELEASES[0]?.version || 'v0.25.0 (Current)');
 
-  // Default to expanding ALL 35 releases so every detail is immediately documented
+  // Default to expanding all releases so every detail is immediately documented
   const [expandedVersions, setExpandedVersions] = useState(() => {
     const all = {};
     RELEASES.forEach((r) => {
@@ -131,7 +131,7 @@ export default function Changelog() {
 
             <AnimatedContent direction="left" delay={0.22} distance={44} blur={14}>
               <p className="hero-sub" style={{ maxWidth: 760, marginBottom: 28, fontSize: 17, color: '#69697A' }}>
-                Complete technical changelog documenting all 35 releases from v0.22 down to v0.1.0. Every architectural change, native Rust N-API commit, Bubblewrap namespace isolation, and memory reduction shipped in source.
+                Complete technical changelog documenting all 36 releases from v0.25.0 down to v0.1.0. Every architectural change, native Rust N-API commit, Bubblewrap namespace isolation, and memory reduction shipped in source.
               </p>
             </AnimatedContent>
 

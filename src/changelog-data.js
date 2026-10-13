@@ -1,6 +1,39 @@
 export const RELEASES = [
   {
-    "version": "v0.22.1 (Current)",
+    "version": "v0.25.0 (Current)",
+    "date": "Oct 14, 2026",
+    "tag": "LATEST",
+    "title": "Clean OpenCode Braille Spinner, Cyber TUI Suite, Jupyter Notebook Tool, Native Core Discovery & 85 Skills",
+    "categories": [
+      {
+        "name": "TUI & USER EXPERIENCE",
+        "items": [
+          "**Clean OpenCode-style braille spinner** — restored the classic, rock-solid braille spinner dot (`⠋`, `⠙`, `⠹`, ...) with theme-native harmonic breathing glow, eliminating star jitter and outline flicker.",
+          "**Cyber TUI suite** — active tab neon underglow, token velocity speedometer, multi-step task stepper with narrow viewport reflow (<50 cols), interactive code pills, Raycast-style command palette, luminous collapsible `<think>` drawer, and clean turn summary receipts.",
+          "**Interactive ask_question menu** — option menus with keyboard navigation and headless fallback defaults."
+        ]
+      },
+      {
+        "name": "TOOLS & WORKFLOWS",
+        "items": [
+          "**Notebook tool** — Jupyter `.ipynb` by cell index (read/edit/insert/delete/clear_outputs) with nbformat-4 validation and summarized output representations.",
+          "**12 new skills (85 total)** — dependency-upgrades, e2e-testing, webhooks, worker-queues, serverless-functions, load-testing, terraform-iac, logging-standards, jupyter-notebooks, shell-scripting, sdk-design, zero-downtime-deploys.",
+          "**MCP registry 12 → 23** — Playwright, Context7, Tavily, Firecrawl, Exa, Supabase, Neon, GitLab, Google Maps, EverArt, AWS KB, Kubernetes with registry-integrity tests."
+        ]
+      },
+      {
+        "name": "ENGINE & RUNTIME",
+        "items": [
+          "**Native Rust core binary discovery** — standalone Bun binary `mochi` now dynamically searches host system paths (`~/.local/bin/mochi-agent`, `~/mochi/native/bin/mochi-agent`), eliminating the virtual-filesystem sandbox barrier.",
+          "**Stall guard watchdog acceleration** — accelerated header stall timeout (45s → 25s) and chunk stall timeout (30s → 20s) with `MOCHI_MODEL_STALL_TIMEOUT_MS` configurability for 2× faster provider failover.",
+          "**6 new providers (27 total)** — Moonshot/Kimi, MiniMax, Zhipu GLM, Z.AI, Cohere, Alibaba Qwen.",
+          "**Prompt bloat reduction** — read-only turns advertise lean tool schema tier (~2K tokens vs ~10K tokens)."
+        ]
+      }
+    ]
+  },
+  {
+    "version": "v0.22.1",
     "date": "Oct 11, 2026",
     "tag": "NEXT",
     "title": "1\u20136 sweep: publish-ready, committed, faster, correct, audited, cross-platform",

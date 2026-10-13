@@ -18,13 +18,13 @@ const STATS = [
   ['18.2 MB', 'PEAK RESIDENT RSS', '21.2× lighter than Claude Code'],
   ['38.2 ms', 'TIME TO FIRST INPUT', '4.5× faster cold-start'],
   ['16', 'SPECIALIST ROLES', 'Autonomous DAG swarms'],
-  ['35', 'RELEASES SHIPPED', '727 files & 1,494 tests passing'],
+  ['36', 'RELEASES SHIPPED', '740+ files & 1,681+ tests passing'],
 ];
 
 const TICKER_ITEMS = [
   '18.2 MB RESIDENT RSS', '38.2 MS TTFI', '21.2× LIGHTER',
   '4.5× FASTER START', 'BUBBLEWRAP SANDBOX', '16 SPECIALIST ROLES',
-  'ZERO DEPS RUNTIME', '727 FILES AUDITED', '1,494 TESTS PASSING',
+  'ZERO DEPS RUNTIME', '740+ FILES AUDITED', '1,681+ TESTS PASSING',
 ];
 
 const CAPABILITIES = [
@@ -875,7 +875,7 @@ function ArchitectureSection() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20, flexWrap: 'wrap', gap: 12 }}>
               <div>
                 <h3 style={{ fontSize: 20, fontWeight: 800, color: '#111116', margin: 0 }}>
-                  Multi-Tab Pinned Sessions (Mochi v0.22.0)
+                  Multi-Tab Pinned Sessions (Mochi v0.25.0)
                 </h3>
                 <p style={{ fontSize: 14, color: 'var(--ink-soft)', margin: '4px 0 0' }}>
                   Run multiple autonomous agents concurrently in isolated terminal tabs with dedicated budgets and abort controllers.
@@ -1417,7 +1417,7 @@ function BenchmarksSection() {
               <thead>
                 <tr style={{ background: '#F4EFFE', borderBottom: '1.5px solid rgba(138, 103, 246, 0.2)' }}>
                   <th style={{ padding: '14px 20px', fontWeight: 800, color: '#111116' }}>Capability</th>
-                  <th style={{ padding: '14px 20px', fontWeight: 800, color: '#8A67F6' }}>Mochi (v0.22.0)</th>
+                  <th style={{ padding: '14px 20px', fontWeight: 800, color: '#8A67F6' }}>Mochi (v0.25.0)</th>
                   <th style={{ padding: '14px 20px', fontWeight: 700, color: '#111116' }}>Claude Code</th>
                   <th style={{ padding: '14px 20px', fontWeight: 700, color: '#111116' }}>Cursor Agent</th>
                   <th style={{ padding: '14px 20px', fontWeight: 700, color: '#111116' }}>Aider</th>
@@ -1568,7 +1568,7 @@ function CodaSection() {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                Download Mochi (v0.22.0)
+                Download Mochi (v0.25.0)
               </a>
               <a
                 href={base + '/docs.html'}
