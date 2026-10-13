@@ -80,6 +80,18 @@ function TerminalDemos() {
             caption="Live session trace: autonomous multi-pass verification loop"
             eager
           />
+          <DemoWindow
+            title="mochi (interactive chat)"
+            src="/assets/demo/tui_chat.gif"
+            alt="Mochi interactive chat session"
+            caption="Interactive TUI chat — say hi in 3 words, streaming reply"
+          />
+          <DemoWindow
+            title="mochi profiles"
+            src="/assets/demo/s8.gif"
+            alt="Mochi model profiles command"
+            caption="One-shot CLI: inspect model profiles, routing, and budgets"
+          />
         </div>
       </AnimatedContent>
     </section>
