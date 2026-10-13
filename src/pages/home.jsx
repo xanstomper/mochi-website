@@ -1714,8 +1714,8 @@ export default function Home() {
     <>
       <EngineeringGridBackground />
       <HeroSection />
-      <TerminalDemos />
       <StatsTicker />
+      <TerminalDemos />
       <CapabilitiesSection />
       <SpecialistRolesSection />
       <ArchitectureSection />
