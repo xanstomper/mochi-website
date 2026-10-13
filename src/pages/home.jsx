@@ -11,6 +11,7 @@ import {
 import {
   IconBolt, IconCode, IconShield, IconGitBranch,
   IconCpu, IconUsers, IconCheck, IconTerminal, IconRocket,
+  SignatureLoadingCore,
 } from '../icons.jsx';
 
 const STATS = [
@@ -339,7 +340,10 @@ function CapabilitiesSection() {
               <div className="editorial-dark-terminal">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: 10, marginBottom: 14 }}>
                   <span style={{ color: 'rgba(255, 255, 255, 0.5)' }}>mochi-engine · spec_act_pipeline.dag</span>
-                  <span style={{ color: '#34D399', fontSize: 11 }}>● STATE: VERIFIED</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <SignatureLoadingCore size={14} />
+                    <span style={{ color: '#A78BFA', fontSize: 11, fontWeight: 600, letterSpacing: '0.05em' }}>COMPUTING DAG</span>
+                  </div>
                 </div>
                 <div style={{ color: '#A78BFA', marginBottom: 8 }}>
                   $ mochi --spec "refactor session auth to redis cluster &amp; update all call sites"

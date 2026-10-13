@@ -154,3 +154,132 @@ export function IconMessageSquare({ size = 20, className = '' }) {
     </svg>
   );
 }
+
+/**
+ * Mochi Signature Loading Indicator — Metamorphic Folding Lattice Core.
+ *
+ * An original, proprietary motion-branding signature for Mochi AI coding agent.
+ * Instead of a circular spinner or progress bar, four isometric facet plates
+ * fold dynamically across a central transverse cleavage axis, deconstructing
+ * and reconstructing around an illuminated crystalline diamond aperture.
+ */
+export function SignatureLoadingCore({ size = 24, className = '' }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      style={{ display: 'inline-block', verticalAlign: 'middle', flexShrink: 0 }}
+      aria-label="Mochi processing"
+    >
+      <style>{`
+        @keyframes mochiFacetNW {
+          0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.95; }
+          25% { transform: translate(2px, -2px) scale(0.88); opacity: 0.75; }
+          50% { transform: translate(3px, 3px) scale(0.95); opacity: 1; }
+          75% { transform: translate(-2px, 2px) scale(1.08); opacity: 0.85; }
+        }
+        @keyframes mochiFacetNE {
+          0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.95; }
+          25% { transform: translate(-2px, -2px) scale(1.08); opacity: 0.85; }
+          50% { transform: translate(-3px, 3px) scale(0.88); opacity: 0.75; }
+          75% { transform: translate(2px, 2px) scale(0.95); opacity: 1; }
+        }
+        @keyframes mochiFacetSE {
+          0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.95; }
+          25% { transform: translate(-2px, 2px) scale(0.88); opacity: 0.75; }
+          50% { transform: translate(-3px, -3px) scale(0.95); opacity: 1; }
+          75% { transform: translate(2px, -2px) scale(1.08); opacity: 0.85; }
+        }
+        @keyframes mochiFacetSW {
+          0%, 100% { transform: translate(0px, 0px) scale(1); opacity: 0.95; }
+          25% { transform: translate(2px, 2px) scale(1.08); opacity: 0.85; }
+          50% { transform: translate(3px, -3px) scale(0.88); opacity: 0.75; }
+          75% { transform: translate(-2px, -2px) scale(0.95); opacity: 1; }
+        }
+        @keyframes mochiSpinePulse {
+          0%, 100% { transform: scaleX(1); opacity: 0.9; }
+          50% { transform: scaleX(0.75); opacity: 0.5; }
+        }
+        @keyframes mochiCoreMorph {
+          0%, 100% { transform: rotate(0deg) scale(1); fill: #FAF5FF; }
+          50% { transform: rotate(90deg) scale(1.2); fill: #56D4DD; }
+        }
+        .m-facet-nw {
+          transform-origin: 16px 14px;
+          animation: mochiFacetNW 2.4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        }
+        .m-facet-ne {
+          transform-origin: 32px 14px;
+          animation: mochiFacetNE 2.4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        }
+        .m-facet-se {
+          transform-origin: 32px 34px;
+          animation: mochiFacetSE 2.4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        }
+        .m-facet-sw {
+          transform-origin: 16px 34px;
+          animation: mochiFacetSW 2.4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        }
+        .m-spine {
+          transform-origin: 24px 24px;
+          animation: mochiSpinePulse 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+        .m-nucleus {
+          transform-origin: 24px 24px;
+          animation: mochiCoreMorph 2.4s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .m-facet-nw, .m-facet-ne, .m-facet-se, .m-facet-sw, .m-spine, .m-nucleus {
+            animation: none !important;
+          }
+        }
+      `}</style>
+      {/* Transverse cleavage vector spine */}
+      <line
+        x1="12"
+        y1="24"
+        x2="36"
+        y2="24"
+        stroke="#56D4DD"
+        strokeWidth="2"
+        strokeLinecap="round"
+        className="m-spine"
+      />
+      {/* Upper-left isometric facet plate */}
+      <path
+        d="M 9,9 L 22,9 L 18,19 L 9,19 Z"
+        fill="#A78BFA"
+        className="m-facet-nw"
+      />
+      {/* Upper-right isometric facet plate */}
+      <path
+        d="M 26,9 L 39,9 L 39,19 L 30,19 Z"
+        fill="#C084FC"
+        className="m-facet-ne"
+      />
+      {/* Lower-right isometric facet plate */}
+      <path
+        d="M 30,29 L 39,29 L 39,39 L 26,39 Z"
+        fill="#818CF8"
+        className="m-facet-se"
+      />
+      {/* Lower-left isometric facet plate */}
+      <path
+        d="M 9,29 L 18,29 L 22,39 L 9,39 Z"
+        fill="#38BDF8"
+        className="m-facet-sw"
+      />
+      {/* Central illuminated crystalline diamond nucleus */}
+      <polygon
+        points="24,18 30,24 24,30 18,24"
+        fill="#FAF5FF"
+        className="m-nucleus"
+      />
+    </svg>
+  );
+}
+
