@@ -882,7 +882,7 @@ function ArchitectureSection() {
                 </p>
               </div>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, background: '#EDE9FE', color: 'var(--purple-dark)', padding: '4px 10px', borderRadius: 999, fontWeight: 700 }}>
-                ALT+T NEW · ALT+1-8 SWITCH
+                MULTI-SESSION RUNTIME · ISOLATED WORKSPACES
               </span>
             </div>
 
